@@ -13,8 +13,8 @@ class ProfileService {
             "success",
             "Berhasil mengambil profile pengembang",
             mapOf(
-                Pair("username", "abdullah.ubaid"),
-                Pair("nama", "Abdullah Ubaid"),
+                Pair("username", "yuri.elsa"),
+                Pair("nama", "Yuri Elsa Rona Uli Pakpahan"),
                 Pair("tentang", "Saya adalah seorang developer yang tertarik pada mobile development, backend API, dan berbagai teknologi pengembangan aplikasi. Senang belajar hal baru dan membangun aplikasi yang berguna."),
             )
         )
@@ -23,7 +23,7 @@ class ProfileService {
 
     // Mengambil photo profile
     suspend fun getProfilePhoto(call: ApplicationCall) {
-        val file = File("uploads/profile/me.png")
+        val file = File("uploads/profile/me.jpg")
 
         if (!file.exists()) {
             return call.respond(HttpStatusCode.NotFound)
